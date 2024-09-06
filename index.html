@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Gastos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gestão de Gastos</h1>
+    <button id="registros-btn" onclick="window.location.href='gastos.html'">Registros
+    <button id="limpar-dados-btn">Limpar Dados</button>
+  </header>
+
+  <section id="container-forms">
+    <section id="saldo-section">
+      <label for="saldo-inicial">Saldo Inicial:</label>
+      <input type="number" id="saldo-inicial" value="0">
+      <button id="definir-saldo">Definir Saldo</button>
+      <p>Saldo Atual: <span id="saldo-atual">0</span></p>
+    </section>
+
+    <section id="gastos-section"> 
+      <form id="formulario-gastos">
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="onde">Onde:</label>
+        <input type="text" id="onde" name="onde" required>
+
+        <label for="valor">Valor:</label>  
+        <input type="number" id="valor" name="valor" required> 
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" >
+
+        <button type="submit">Salvar Gasto</button>
+      </form>
+    </section>
+  </section>
+
+  <footer>
+    <p>Todos direitos reservados à Jefferson Camargo</p>
+    <p>Duvidas entrar em contato pelo e mail xxxx@xxxxx</p>
+  </footer>
+  <script src="script.js"></script> 
+</body>
+</html>

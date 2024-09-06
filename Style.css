@@ -1,0 +1,156 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Define variáveis para cores e tamanhos */
+:root {
+  --primary-color: #222831; 
+  --secondary-color: #4CAF50;
+  --input-bg: #f5f5f5;
+  --border-radius: 5px;
+  --padding-small: 0.5rem;
+  --padding-medium: 1rem;
+}
+
+/* Estilos gerais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0;
+  background-color: #f4f4f4; 
+}
+
+/* Estilos do cabeçalho */
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: var(--padding-medium);
+  text-align: center;
+
+  /* Para posicionar os botões com Flexbox */
+  display: flex;
+  justify-content: space-between; /* Distribui elementos horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+}
+
+/* Estilos da seção do formulário */
+section {
+  padding: var(--padding-medium);
+  max-width: 600px; 
+  margin: var(--padding-medium) auto; 
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilos dos labels */
+label {
+  display: block;
+  margin-bottom: var(--padding-small);
+}
+
+/* Estilos dos inputs */
+input[type="date"],
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: var(--padding-small);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--padding-medium);
+}
+
+/* Estilos do botão */
+button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: var(--padding-small) var(--padding-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+button:hover {
+  background-color: darken(var(--secondary-color), 10%); 
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: var(--padding-medium) 0; 
+  margin-top: auto; 
+}
+
+/* Estilos para a seção de saldo */
+#saldo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+#saldo-section input {
+  width: 200px;
+}
+
+/* Estilos para a lista de gastos */
+#lista-gastos {
+  margin-top: 20px; 
+}
+
+#gastos {
+  list-style: none; 
+  padding: 0;
+}
+
+#gastos li {
+  margin-bottom: 10px; 
+}
+
+/* Container Flexbox para o saldo e formulário de gastos */
+#container-forms {
+  display: flex; 
+  gap: 20px;
+  margin: var(--padding-medium) auto; 
+  max-width: 900px; 
+}
+
+/* Seção de Saldo (à esquerda) */
+#saldo-section {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* Seção de Gastos (à direita) */
+#gastos-section {
+  flex: 2;
+}
+
+/* Classe para estilos de botão */
+.botao-principal {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Aplicando a classe aos botões */
+#registrar-gasto-btn,
+#voltar-btn,
+#registros-btn,
+#limpar-dados-btn {
+  @extend .botao-principal;
+}
