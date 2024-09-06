@@ -146,11 +146,3 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
-
-/* Aplicando a classe aos botões */
-#registrar-gasto-btn,
-#voltar-btn,
-#registros-btn,
-#limpar-dados-btn {
-  @extend .botao-principal;
-}
